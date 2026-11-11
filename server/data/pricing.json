@@ -1,0 +1,309 @@
+{
+  "provenance": {
+    "sourceType": "synthetic_demo",
+    "generatedAt": "2026-11-01T00:30:00.000Z",
+    "periodStart": "2026-09-01",
+    "periodEnd": "2026-10-31",
+    "lastUpdatedAt": "2026-11-01T00:30:00.000Z",
+    "note": "Synthetic demo data generated for Mini AI. Not Snapdeal data. Market reference prices are synthetic, not competitor data."
+  },
+  "records": [
+    {
+      "productId": "PRD-001",
+      "currentSellingPrice": 399,
+      "costPrice": 205,
+      "previousSellingPrice": 399,
+      "suggestedPriceRange": {
+        "min": 408,
+        "max": 442
+      },
+      "syntheticMarketReferencePrice": 429,
+      "pricingPosition": "Below Market Reference",
+      "discountPercentage": 0.5006,
+      "estimatedGrossMargin": 0.4862,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-002",
+      "currentSellingPrice": 599,
+      "costPrice": 300,
+      "previousSellingPrice": 599,
+      "suggestedPriceRange": {
+        "min": 550,
+        "max": 596
+      },
+      "syntheticMarketReferencePrice": 579,
+      "pricingPosition": "Competitive",
+      "discountPercentage": 0.5004,
+      "estimatedGrossMargin": 0.4992,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-003",
+      "currentSellingPrice": 799,
+      "costPrice": 470,
+      "previousSellingPrice": 799,
+      "suggestedPriceRange": {
+        "min": 664,
+        "max": 720
+      },
+      "syntheticMarketReferencePrice": 699,
+      "pricingPosition": "Slightly Expensive",
+      "discountPercentage": 0.467,
+      "estimatedGrossMargin": 0.4118,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-004",
+      "currentSellingPrice": 349,
+      "costPrice": 165,
+      "previousSellingPrice": 349,
+      "suggestedPriceRange": {
+        "min": 341,
+        "max": 370
+      },
+      "syntheticMarketReferencePrice": 359,
+      "pricingPosition": "Competitive",
+      "discountPercentage": 0.5007,
+      "estimatedGrossMargin": 0.5272,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-005",
+      "currentSellingPrice": 699,
+      "costPrice": 380,
+      "previousSellingPrice": 699,
+      "suggestedPriceRange": {
+        "min": 712,
+        "max": 771
+      },
+      "syntheticMarketReferencePrice": 749,
+      "pricingPosition": "Below Market Reference",
+      "discountPercentage": 0.5004,
+      "estimatedGrossMargin": 0.4564,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-006",
+      "currentSellingPrice": 999,
+      "costPrice": 560,
+      "previousSellingPrice": 999,
+      "suggestedPriceRange": {
+        "min": 902,
+        "max": 977
+      },
+      "syntheticMarketReferencePrice": 949,
+      "pricingPosition": "Slightly Expensive",
+      "discountPercentage": 0.5003,
+      "estimatedGrossMargin": 0.4394,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-007",
+      "currentSellingPrice": 549,
+      "costPrice": 270,
+      "previousSellingPrice": 549,
+      "suggestedPriceRange": {
+        "min": 569,
+        "max": 617
+      },
+      "syntheticMarketReferencePrice": 599,
+      "pricingPosition": "Below Market Reference",
+      "discountPercentage": 0.4505,
+      "estimatedGrossMargin": 0.5082,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-008",
+      "currentSellingPrice": 499,
+      "costPrice": 250,
+      "previousSellingPrice": 499,
+      "suggestedPriceRange": {
+        "min": 493,
+        "max": 535
+      },
+      "syntheticMarketReferencePrice": 519,
+      "pricingPosition": "Competitive",
+      "discountPercentage": 0.546,
+      "estimatedGrossMargin": 0.499,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-009",
+      "currentSellingPrice": 289,
+      "costPrice": 125,
+      "previousSellingPrice": 289,
+      "suggestedPriceRange": {
+        "min": 284,
+        "max": 308
+      },
+      "syntheticMarketReferencePrice": 299,
+      "pricingPosition": "Competitive",
+      "discountPercentage": 0.5175,
+      "estimatedGrossMargin": 0.5675,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-010",
+      "currentSellingPrice": 599,
+      "costPrice": 300,
+      "previousSellingPrice": 599,
+      "suggestedPriceRange": {
+        "min": 550,
+        "max": 596
+      },
+      "syntheticMarketReferencePrice": 579,
+      "pricingPosition": "Competitive",
+      "discountPercentage": 0.455,
+      "estimatedGrossMargin": 0.4992,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-011",
+      "currentSellingPrice": 299,
+      "costPrice": 125,
+      "previousSellingPrice": 299,
+      "suggestedPriceRange": {
+        "min": 303,
+        "max": 329
+      },
+      "syntheticMarketReferencePrice": 319,
+      "pricingPosition": "Below Market Reference",
+      "discountPercentage": 0.4554,
+      "estimatedGrossMargin": 0.5819,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-012",
+      "currentSellingPrice": 325,
+      "costPrice": 135,
+      "previousSellingPrice": 325,
+      "suggestedPriceRange": {
+        "min": 379,
+        "max": 411
+      },
+      "syntheticMarketReferencePrice": 399,
+      "pricingPosition": "Below Market Reference",
+      "discountPercentage": 0.4992,
+      "estimatedGrossMargin": 0.5846,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-013",
+      "currentSellingPrice": 449,
+      "costPrice": 220,
+      "previousSellingPrice": 449,
+      "suggestedPriceRange": {
+        "min": 446,
+        "max": 483
+      },
+      "syntheticMarketReferencePrice": 469,
+      "pricingPosition": "Competitive",
+      "discountPercentage": 0.5006,
+      "estimatedGrossMargin": 0.51,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-014",
+      "currentSellingPrice": 549,
+      "costPrice": 285,
+      "previousSellingPrice": 549,
+      "suggestedPriceRange": {
+        "min": 503,
+        "max": 545
+      },
+      "syntheticMarketReferencePrice": 529,
+      "pricingPosition": "Competitive",
+      "discountPercentage": 0.4505,
+      "estimatedGrossMargin": 0.4809,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-015",
+      "currentSellingPrice": 899,
+      "costPrice": 520,
+      "previousSellingPrice": 899,
+      "suggestedPriceRange": {
+        "min": 759,
+        "max": 823
+      },
+      "syntheticMarketReferencePrice": 799,
+      "pricingPosition": "Slightly Expensive",
+      "discountPercentage": 0.6403,
+      "estimatedGrossMargin": 0.4216,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-016",
+      "currentSellingPrice": 1399,
+      "costPrice": 760,
+      "previousSellingPrice": 1199,
+      "suggestedPriceRange": {
+        "min": 1092,
+        "max": 1183
+      },
+      "syntheticMarketReferencePrice": 1149,
+      "pricingPosition": "Significantly Expensive",
+      "discountPercentage": 0.4402,
+      "estimatedGrossMargin": 0.4568,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-017",
+      "currentSellingPrice": 1199,
+      "costPrice": 1060,
+      "previousSellingPrice": 1199,
+      "suggestedPriceRange": {
+        "min": 1248,
+        "max": 1286
+      },
+      "syntheticMarketReferencePrice": 1249,
+      "pricingPosition": "Competitive",
+      "discountPercentage": 0.7002,
+      "estimatedGrossMargin": 0.1159,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-018",
+      "currentSellingPrice": 299,
+      "costPrice": 140,
+      "previousSellingPrice": 299,
+      "suggestedPriceRange": {
+        "min": 265,
+        "max": 287
+      },
+      "syntheticMarketReferencePrice": 279,
+      "pricingPosition": "Slightly Expensive",
+      "discountPercentage": 0.5722,
+      "estimatedGrossMargin": 0.5318,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-019",
+      "currentSellingPrice": 185,
+      "costPrice": 70,
+      "previousSellingPrice": 185,
+      "suggestedPriceRange": null,
+      "syntheticMarketReferencePrice": null,
+      "pricingPosition": "Insufficient Data",
+      "discountPercentage": 0.5363,
+      "estimatedGrossMargin": 0.6216,
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "productId": "PRD-020",
+      "currentSellingPrice": 449,
+      "costPrice": 230,
+      "previousSellingPrice": 449,
+      "suggestedPriceRange": {
+        "min": 408,
+        "max": 442
+      },
+      "syntheticMarketReferencePrice": 429,
+      "pricingPosition": "Competitive",
+      "discountPercentage": 0.5006,
+      "estimatedGrossMargin": 0.4878,
+      "sourceType": "synthetic_demo"
+    }
+  ]
+}

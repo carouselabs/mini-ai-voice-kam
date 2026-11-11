@@ -1,0 +1,32 @@
+{
+  "datasetVersion": "2026.11.1",
+  "seed": 20261101,
+  "generatedAt": "2026-11-01T00:30:00.000Z",
+  "lastUpdatedAt": "2026-11-01T00:30:00.000Z",
+  "freshnessWindowDays": 35,
+  "periods": {
+    "previous": {
+      "key": "previous",
+      "label": "September 2026",
+      "shortLabel": "Sep 2026",
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    },
+    "current": {
+      "key": "current",
+      "label": "October 2026",
+      "shortLabel": "Oct 2026",
+      "start": "2026-10-01",
+      "end": "2026-10-31"
+    }
+  },
+  "assumptions": [
+    "“This month” is October 2026 and “last month” is September 2026; data was refreshed at 06:00 IST on 1 November 2026.",
+    "Sales means the gross value of orders placed, including orders later cancelled or returned. This matches the brief: ₹1,35,000 ÷ 270 orders = ₹500 average selling price.",
+    "Every order is for one unit, so average selling price equals average order value, as in the brief.",
+    "Out-of-stock products are counted per SKU (size or colour variant): 18 of 43 SKUs in October, 5 at the end of September.",
+    "Cancellation rate = cancelled orders ÷ orders placed in the same month (order cohort).",
+    "Return rate = returns ÷ delivered orders placed in the same month. Late-October orders are still inside the return window.",
+    "Return rate, visibility, pricing references, reviews, suppliers and every individual record are synthetic demo data."
+  ]
+}

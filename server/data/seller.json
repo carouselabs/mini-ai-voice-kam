@@ -1,0 +1,27 @@
+{
+  "provenance": {
+    "sourceType": "synthetic_demo",
+    "generatedAt": "2026-11-01T00:30:00.000Z",
+    "periodStart": "2026-09-01",
+    "periodEnd": "2026-10-31",
+    "lastUpdatedAt": "2026-11-01T00:30:00.000Z",
+    "note": "Synthetic demo data generated for Mini AI. Not Snapdeal data."
+  },
+  "record": {
+    "sellerId": "DEMO-SELLER-001",
+    "sellerName": "UrbanCart Fashion & Lifestyle",
+    "marketplace": "Snapdeal",
+    "businessCategory": [
+      "Fashion",
+      "Lifestyle",
+      "Electronics"
+    ],
+    "accountStatus": "Active",
+    "registrationDate": "2023-09-18",
+    "businessLocation": "Jaipur, Rajasthan",
+    "accountManager": "Mini AI Virtual KAM (demo)",
+    "dataMode": "DEMO",
+    "lastDataUpdated": "2026-11-01T00:30:00.000Z",
+    "sourceType": "synthetic_demo"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "mini-ai",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Mini AI: a Virtual Key Account Manager for marketplace sellers (demo).",
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run typecheck -w @mini-ai/server && npm run build -w @mini-ai/client",
+    "start": "npm run start -w @mini-ai/server",
+    "typecheck": "npm run typecheck -w @mini-ai/server && npm run typecheck -w @mini-ai/client",
+    "lint": "npm run lint -w @mini-ai/server && npm run lint -w @mini-ai/client",
+    "test:unit": "node --test \"client/tests/unit/*.test.ts\" && npm test -w @mini-ai/server",
+    "test:e2e": "npm run build && playwright test",
+    "test": "npm run test:unit && npm run test:e2e",
+    "data:generate": "npm run data:generate -w @mini-ai/server",
+    "ai:eval": "npm run ai:eval -w @mini-ai/server --",
+    "voice:eval": "npm run voice:eval -w @mini-ai/server --",
+    "demo:reset": "node -e \"require('fs').rmSync('server/runtime',{recursive:true,force:true});console.log('Action Tracker and seller memory cleared.')\"",
+    "voice:live": "node scripts/voice-live.mjs",
+    "voice:live:browser": "node scripts/voice-live-browser.mjs",
+    "verify:production": "node scripts/verify-production.mjs",
+    "deploy:vercel": "npm run build && node scripts/build-vercel.mjs && vercel deploy --prebuilt --prod"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  },
+  "engines": {
+    "node": ">=22.22"
+  }
+}

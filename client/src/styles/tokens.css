@@ -1,0 +1,149 @@
+/*
+ * Mini AI design tokens.
+ * Every colour, size, radius, shadow and curve used by the UI is defined here.
+ * The default Tailwind palette is switched off so components can only use these tokens.
+ */
+@theme {
+  /* ---------- Colour primitives ---------- */
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Brand: deep purple */
+  --color-brand-50: #f5f2ff;
+  --color-brand-100: #ebe5ff;
+  --color-brand-200: #d8ccfe;
+  --color-brand-300: #b9a2fb;
+  --color-brand-400: #9572f5;
+  --color-brand-500: #7548ea;
+  --color-brand-600: #5f2fd6;
+  --color-brand-700: #4f24b5;
+  --color-brand-800: #401f91;
+  --color-brand-900: #2f186a;
+  --color-brand-950: #1d0e45;
+
+  /* Neutrals: cool charcoal */
+  --color-ink-25: #fbfbfd;
+  --color-ink-50: #f6f6f9;
+  --color-ink-100: #efeff3;
+  --color-ink-150: #e7e7ed;
+  --color-ink-200: #dcdce4;
+  --color-ink-300: #c3c3cf;
+  --color-ink-400: #9b9bab;
+  --color-ink-500: #6c6c7d;
+  --color-ink-600: #565666;
+  --color-ink-700: #41414f;
+  --color-ink-800: #2a2a35;
+  --color-ink-900: #1b1b23;
+  --color-ink-950: #121218;
+
+  /* ---------- Semantic colour ---------- */
+  --color-canvas: var(--color-ink-50);
+  --color-surface: var(--color-white);
+  --color-surface-muted: var(--color-ink-25);
+  --color-surface-sunken: var(--color-ink-100);
+
+  --color-line: var(--color-ink-150);
+  --color-line-strong: var(--color-ink-200);
+
+  --color-fg: var(--color-ink-900);
+  --color-fg-secondary: var(--color-ink-700);
+  --color-fg-muted: var(--color-ink-500); /* lowest text contrast allowed: 5:1 on white */
+  --color-fg-subtle: var(--color-ink-400); /* icons and decoration only, never body text */
+
+  --color-accent: var(--color-brand-600);
+  --color-accent-hover: var(--color-brand-700);
+  --color-accent-soft: var(--color-brand-50);
+  --color-accent-fg: var(--color-brand-700);
+
+  /* Status. Always shown with an icon and a label, never colour alone. */
+  --color-positive: #0a7a3e;
+  --color-positive-soft: #e8f6ee;
+  --color-positive-mark: #0ca30c;
+  --color-negative: #b8322a;
+  --color-negative-soft: #fdeeec;
+  --color-negative-mark: #d03b3b;
+  --color-warning: #8a5300;
+  --color-warning-soft: #fff4dc;
+  --color-warning-mark: #fab219;
+
+  /* ---------- Typography ---------- */
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.125rem;
+  --text-title: 1.375rem;
+  --text-title--line-height: 1.75rem;
+  --text-title--letter-spacing: -0.018em;
+  --text-metric: 1.625rem;
+  --text-metric--line-height: 2rem;
+  --text-metric--letter-spacing: -0.022em;
+
+  /* ---------- Shape ---------- */
+  --radius-control: 0.5rem;
+  --radius-card: 0.75rem;
+  --radius-panel: 1rem;
+
+  --shadow-card: 0 1px 2px 0 rgb(18 18 24 / 0.04);
+  --shadow-raised: 0 1px 2px rgb(18 18 24 / 0.05), 0 4px 12px -4px rgb(18 18 24 / 0.08);
+  --shadow-popover: 0 2px 6px rgb(18 18 24 / 0.06), 0 16px 36px -10px rgb(18 18 24 / 0.2);
+  --shadow-panel: 0 4px 12px rgb(29 14 69 / 0.08), 0 28px 64px -16px rgb(29 14 69 / 0.32);
+  --shadow-orb: 0 10px 28px -6px rgb(95 47 214 / 0.55), 0 3px 8px rgb(29 14 69 / 0.22);
+
+  /* ---------- Layout ---------- */
+  --spacing-sidebar: 16rem;
+  --spacing-rail: 4.5rem;
+  --spacing-topbar: 4rem;
+
+  /* ---------- Motion ---------- */
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --animate-orb-breathe: orb-breathe 4.8s ease-in-out infinite;
+  --animate-orb-swirl: orb-swirl 14s linear infinite;
+  --animate-orb-ring: orb-ring 2.4s var(--ease-out-quint) 0.8s 3 both;
+  --animate-orb-enter: orb-enter 560ms var(--ease-out-quint) 0.2s both;
+
+  @keyframes orb-breathe {
+    0%,
+    100% {
+      opacity: 0.55;
+      transform: scale(0.96);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.06);
+    }
+  }
+
+  @keyframes orb-swirl {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes orb-ring {
+    0% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    70%,
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+
+  @keyframes orb-enter {
+    from {
+      opacity: 0;
+      transform: translateY(10px) scale(0.6);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

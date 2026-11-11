@@ -1,0 +1,32 @@
+{
+  "provenance": {
+    "sourceType": "assignment_provided",
+    "generatedAt": "2026-11-01T00:30:00.000Z",
+    "periodStart": "2026-09-01",
+    "periodEnd": "2026-10-31",
+    "lastUpdatedAt": "2026-11-01T00:30:00.000Z",
+    "note": "Aggregate figures from the Mini AI Voice KAM assignment brief."
+  },
+  "metrics": {
+    "sales": {
+      "previous": 200000,
+      "current": 135000
+    },
+    "orders": {
+      "previous": 400,
+      "current": 270
+    },
+    "cancellationRate": {
+      "previous": 0.08,
+      "current": 0.14
+    },
+    "averageSellingPrice": {
+      "previous": 500,
+      "current": 500
+    },
+    "outOfStockProducts": {
+      "previous": 5,
+      "current": 18
+    }
+  }
+}

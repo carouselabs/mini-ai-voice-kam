@@ -1,0 +1,16 @@
+# Never send secrets or local state into the image.
+**/.env
+**/.env.*
+!**/.env.example
+**/node_modules
+client/dist
+server/runtime
+server/eval-results
+test-results
+playwright-report
+shots
+docs
+.git
+.vscode
+.idea
+*.log

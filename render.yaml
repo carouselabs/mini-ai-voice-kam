@@ -1,0 +1,26 @@
+# Render Blueprint for Mini AI (https://render.com/docs/blueprint-spec).
+# Render builds the Dockerfile, serves it over HTTPS (needed for the browser microphone) and checks /api/health.
+# The OpenAI key is entered in the Render dashboard when the Blueprint is created; it is never in this file or the repo.
+services:
+  - type: web
+    name: mini-ai
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    # A persistent disk needs a paid instance. On the free plan, delete the "disk" block: the app still works,
+    # but the Action Tracker and seller memory reset whenever the instance restarts or sleeps.
+    plan: starter
+    region: singapore
+    healthCheckPath: /api/health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false # prompted for in the dashboard; stored as a secret
+      - key: TRUST_PROXY
+        value: "1"
+      - key: MINI_AI_RUNTIME_DIR
+        value: /data/runtime
+      - key: AI_RATE_LIMIT
+        value: "40"
+    disk:
+      name: mini-ai-data
+      mountPath: /data
+      sizeGB: 1

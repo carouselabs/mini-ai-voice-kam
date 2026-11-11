@@ -1,0 +1,210 @@
+{
+  "provenance": {
+    "sourceType": "synthetic_demo",
+    "generatedAt": "2026-11-01T00:30:00.000Z",
+    "periodStart": "2026-09-01",
+    "periodEnd": "2026-10-31",
+    "lastUpdatedAt": "2026-11-01T00:30:00.000Z",
+    "note": "Synthetic demo data generated for Mini AI. Not Snapdeal data. Review text was written for the demo."
+  },
+  "records": [
+    {
+      "reviewId": "REV-001",
+      "productId": "PRD-015",
+      "anonymisedCustomerId": "CUST-66368",
+      "rating": 1,
+      "reviewDate": "2026-10-14T04:53:42.713Z",
+      "reviewText": "Left earbud stopped charging after a week.",
+      "sentiment": "Negative",
+      "issueCategory": "Product Quality",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-002",
+      "productId": "PRD-015",
+      "anonymisedCustomerId": "CUST-92442",
+      "rating": 2,
+      "reviewDate": "2026-10-11T01:48:09.057Z",
+      "reviewText": "Sound keeps cutting out on calls.",
+      "sentiment": "Negative",
+      "issueCategory": "Product Quality",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-003",
+      "productId": "PRD-015",
+      "anonymisedCustomerId": "CUST-47675",
+      "rating": 2,
+      "reviewDate": "2026-10-06T16:56:13.056Z",
+      "reviewText": "Battery drains much faster than the 24 hours claimed.",
+      "sentiment": "Negative",
+      "issueCategory": "Description Mismatch",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-004",
+      "productId": "PRD-015",
+      "anonymisedCustomerId": "CUST-58345",
+      "rating": 3,
+      "reviewDate": "2026-10-13T18:14:53.469Z",
+      "reviewText": "Decent sound for the price, but the case feels flimsy.",
+      "sentiment": "Neutral",
+      "issueCategory": "Product Quality",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-005",
+      "productId": "PRD-002",
+      "anonymisedCustomerId": "CUST-92386",
+      "rating": 2,
+      "reviewDate": "2026-10-22T01:03:34.442Z",
+      "reviewText": "Runs small. Ordered L and it fits like an M.",
+      "sentiment": "Negative",
+      "issueCategory": "Sizing",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-006",
+      "productId": "PRD-002",
+      "anonymisedCustomerId": "CUST-72744",
+      "rating": 2,
+      "reviewDate": "2026-10-15T07:15:36.730Z",
+      "reviewText": "Size chart is off; had to return it.",
+      "sentiment": "Negative",
+      "issueCategory": "Sizing",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-007",
+      "productId": "PRD-002",
+      "anonymisedCustomerId": "CUST-16723",
+      "rating": 4,
+      "reviewDate": "2026-10-20T06:57:16.377Z",
+      "reviewText": "Lovely print and soft fabric.",
+      "sentiment": "Positive",
+      "issueCategory": "None",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-008",
+      "productId": "PRD-008",
+      "anonymisedCustomerId": "CUST-75629",
+      "rating": 2,
+      "reviewDate": "2026-10-25T05:51:03.437Z",
+      "reviewText": "The blue looks grey in person, nothing like the photos.",
+      "sentiment": "Negative",
+      "issueCategory": "Description Mismatch",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-009",
+      "productId": "PRD-008",
+      "anonymisedCustomerId": "CUST-31974",
+      "rating": 3,
+      "reviewDate": "2026-10-16T10:38:58.329Z",
+      "reviewText": "Fabric is fine, colour is a bit dull.",
+      "sentiment": "Neutral",
+      "issueCategory": "Description Mismatch",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-010",
+      "productId": "PRD-010",
+      "anonymisedCustomerId": "CUST-67063",
+      "rating": 1,
+      "reviewDate": "2026-10-19T14:49:03.433Z",
+      "reviewText": "Arrived with a cracked base. Packaging was very thin.",
+      "sentiment": "Negative",
+      "issueCategory": "Packaging",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-011",
+      "productId": "PRD-016",
+      "anonymisedCustomerId": "CUST-58477",
+      "rating": 3,
+      "reviewDate": "2026-10-14T16:38:39.032Z",
+      "reviewText": "Sound is fine but too pricey for a 10 W speaker.",
+      "sentiment": "Neutral",
+      "issueCategory": "Pricing",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-012",
+      "productId": "PRD-006",
+      "anonymisedCustomerId": "CUST-88145",
+      "rating": 2,
+      "reviewDate": "2026-10-24T09:17:49.303Z",
+      "reviewText": "Took nine days to arrive.",
+      "sentiment": "Negative",
+      "issueCategory": "Delivery",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-013",
+      "productId": "PRD-004",
+      "anonymisedCustomerId": "CUST-96531",
+      "rating": 5,
+      "reviewDate": "2026-10-23T00:20:19.904Z",
+      "reviewText": "Comfortable and true to size.",
+      "sentiment": "Positive",
+      "issueCategory": "None",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-014",
+      "productId": "PRD-011",
+      "anonymisedCustomerId": "CUST-55465",
+      "rating": 5,
+      "reviewDate": "2026-10-13T03:06:19.283Z",
+      "reviewText": "Keeps water cold, no leaks.",
+      "sentiment": "Positive",
+      "issueCategory": "None",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-015",
+      "productId": "PRD-012",
+      "anonymisedCustomerId": "CUST-94926",
+      "rating": 5,
+      "reviewDate": "2026-10-29T03:04:28.676Z",
+      "reviewText": "Beautiful fragrance, great gift.",
+      "sentiment": "Positive",
+      "issueCategory": "None",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-016",
+      "productId": "PRD-018",
+      "anonymisedCustomerId": "CUST-38816",
+      "rating": 4,
+      "reviewDate": "2026-10-27T03:00:31.122Z",
+      "reviewText": "Charges my phone quickly.",
+      "sentiment": "Positive",
+      "issueCategory": "None",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-017",
+      "productId": "PRD-017",
+      "anonymisedCustomerId": "CUST-20486",
+      "rating": 4,
+      "reviewDate": "2026-10-31T22:30:00.000Z",
+      "reviewText": "Good value. Heart-rate readings seem accurate.",
+      "sentiment": "Positive",
+      "issueCategory": "None",
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "reviewId": "REV-018",
+      "productId": "PRD-007",
+      "anonymisedCustomerId": "CUST-37754",
+      "rating": 5,
+      "reviewDate": "2026-10-17T04:31:20.711Z",
+      "reviewText": "Very comfortable, fits perfectly.",
+      "sentiment": "Positive",
+      "issueCategory": "None",
+      "sourceType": "synthetic_demo"
+    }
+  ]
+}

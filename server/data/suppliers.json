@@ -1,0 +1,123 @@
+{
+  "provenance": {
+    "sourceType": "synthetic_demo",
+    "generatedAt": "2026-11-01T00:30:00.000Z",
+    "periodStart": "2026-09-01",
+    "periodEnd": "2026-10-31",
+    "lastUpdatedAt": "2026-11-01T00:30:00.000Z",
+    "note": "Synthetic demo data generated for Mini AI. Not Snapdeal data. Fictional suppliers; Mini AI never contacts them."
+  },
+  "records": [
+    {
+      "supplierId": "SUP-01",
+      "supplierName": "Kaveri Knit Works (Demo)",
+      "averageLeadTime": 9,
+      "lastOrderDate": "2026-10-03",
+      "expectedRestockDate": "2026-11-08",
+      "supplierStatus": "Delayed",
+      "contactPersonDemo": "R. Iyer (demo contact)",
+      "performanceNotes": "Hoodie restock ordered 3 Oct was promised for 25 Oct; now expected 8 Nov. No purchase order raised yet for T-shirt sizes M and L.",
+      "suppliedProducts": [
+        "PRD-001",
+        "PRD-005"
+      ],
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "supplierId": "SUP-02",
+      "supplierName": "Sanganer Prints & Textiles (Demo)",
+      "averageLeadTime": 7,
+      "lastOrderDate": "2026-09-28",
+      "expectedRestockDate": null,
+      "supplierStatus": "Active",
+      "contactPersonDemo": "M. Sharma (demo contact)",
+      "performanceNotes": "Reliable lead times. Colour batches vary between dye lots.",
+      "suppliedProducts": [
+        "PRD-002",
+        "PRD-004",
+        "PRD-008",
+        "PRD-013"
+      ],
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "supplierId": "SUP-03",
+      "supplierName": "Stride Footwear Co. (Demo)",
+      "averageLeadTime": 12,
+      "lastOrderDate": "2026-09-08",
+      "expectedRestockDate": null,
+      "supplierStatus": "Active",
+      "contactPersonDemo": "A. Khan (demo contact)",
+      "performanceNotes": "Minimum order of 40 pairs per size.",
+      "suppliedProducts": [
+        "PRD-006",
+        "PRD-007"
+      ],
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "supplierId": "SUP-04",
+      "supplierName": "Moradabad Homecraft (Demo)",
+      "averageLeadTime": 10,
+      "lastOrderDate": "2026-10-10",
+      "expectedRestockDate": null,
+      "supplierStatus": "Active",
+      "contactPersonDemo": "S. Gupta (demo contact)",
+      "performanceNotes": "Ships in bulk cartons; individual item packaging is basic.",
+      "suppliedProducts": [
+        "PRD-009",
+        "PRD-010",
+        "PRD-011",
+        "PRD-012"
+      ],
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "supplierId": "SUP-05",
+      "supplierName": "Nexa Gadgets Distribution (Demo)",
+      "averageLeadTime": 21,
+      "lastOrderDate": "2026-10-08",
+      "expectedRestockDate": null,
+      "supplierStatus": "Active",
+      "contactPersonDemo": "V. Mehta (demo contact)",
+      "performanceNotes": "Imported stock; lead time of three weeks. Earbud batch received 6 Sep.",
+      "suppliedProducts": [
+        "PRD-015",
+        "PRD-016",
+        "PRD-017",
+        "PRD-018",
+        "PRD-019",
+        "PRD-020"
+      ],
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "supplierId": "SUP-06",
+      "supplierName": "Asana Fitness Supplies (Demo)",
+      "averageLeadTime": 8,
+      "lastOrderDate": "2026-10-15",
+      "expectedRestockDate": "2026-11-12",
+      "supplierStatus": "Delayed",
+      "contactPersonDemo": "P. Negi (demo contact)",
+      "performanceNotes": "Yoga mat restock ordered 15 Oct; delivery moved from 26 Oct to 12 Nov.",
+      "suppliedProducts": [
+        "PRD-014"
+      ],
+      "sourceType": "synthetic_demo"
+    },
+    {
+      "supplierId": "SUP-07",
+      "supplierName": "Urban Weave Garments (Demo)",
+      "averageLeadTime": 10,
+      "lastOrderDate": "2026-09-12",
+      "expectedRestockDate": null,
+      "supplierStatus": "Active",
+      "contactPersonDemo": "H. Singh (demo contact)",
+      "performanceNotes": "Waist sizes 30 and 36 are produced in small runs.",
+      "suppliedProducts": [
+        "PRD-003"
+      ],
+      "sourceType": "synthetic_demo"
+    }
+  ]
+}

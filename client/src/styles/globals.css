@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-200);
+    color: var(--color-brand-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+  }
+}
+
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-200) transparent;
+}
+
+/* The AI orb. Built from layered gradients so it stays sharp at any size. */
+@layer components {
+  .orb-sphere {
+    background: radial-gradient(
+      120% 120% at 30% 22%,
+      #b49dfb 0%,
+      #7d52ee 30%,
+      #5f2fd6 55%,
+      #3a1c85 82%,
+      #26114f 100%
+    );
+    box-shadow:
+      inset 0 -6px 14px rgb(20 6 56 / 0.45),
+      inset 0 2px 4px rgb(255 255 255 / 0.28);
+  }
+
+  .orb-swirl {
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgb(214 200 255 / 0.55) 70deg,
+      transparent 140deg,
+      rgb(160 120 255 / 0.35) 220deg,
+      transparent 290deg
+    );
+  }
+
+  .orb-specular {
+    background: radial-gradient(circle at 32% 24%, rgb(255 255 255 / 0.5), transparent 42%);
+  }
+
+  .orb-glow {
+    background: radial-gradient(closest-side, rgb(117 72 234 / 0.5), rgb(117 72 234 / 0));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
