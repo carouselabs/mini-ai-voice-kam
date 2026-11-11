@@ -1,57 +1,87 @@
-# Mini AI: Virtual Key Account Manager for marketplace sellers
+# Mini AI: Voice Key Account Manager for Snapdeal sellers
 
-**Technical note · one page · demo build, November 2026**
+**Technical note · Anant Goyal · November 2026 · Demo: https://miniai.anantgoyal.in**
 
-**What it does.** Mini AI is a seller dashboard with a voice-first assistant that acts like a key account manager. When the
-seller opens it, it inspects the account first, then tells the seller what matters (for example "sales fell 32.5%, about
-₹65,000, on 130 fewer orders at the same ₹500 price"). It answers spoken or typed questions in English, Hindi or Hinglish,
-investigates causes with evidence, proposes prioritised actions, and keeps an action tracker the seller approves.
+**What it is.** A browser-based **voice** assistant that acts as a seller's Key Account Manager. A seller whose sales
+dropped opens it and simply talks. Mini AI has already checked the account, so it:
 
-**Model integration.** The browser never talks to OpenAI. A Node/Express server calls the **OpenAI Responses API** with the
-key held only in a server environment variable; it never reaches the browser, the bundle, logs or API responses. Tested
-configuration: **gpt-5.4-mini** (the server picks the newest `gpt-*-mini` model the key can use; `OPENAI_MODEL` pins one),
-low reasoning effort, `store: false`. Answers are streamed to the browser over server-sent events, including each data
-check as it actually runs.
+- greets them and asks why they are calling;
+- investigates the drop with real data checks;
+- asks about what only the seller knows;
+- recommends two or three actions;
+- recaps at the end.
 
-**Tool calling.** The model has 29 strictly-typed functions and nothing else: 24 read-only data functions (sales, orders,
-inventory, cancellations, returns, delivery, pricing, reviews, profitability, and seven investigations) and 5 for the seller's
-workspace (read the tracker, propose a tracker entry, note something the seller said, recall it, business review). Each
-call is allowlisted and argument-validated; results are compacted to fit the context. Up to 8 tool rounds per answer.
+It sits on a full seller dashboard (17 pages) with an action tracker the seller approves.
 
-**KAM reasoning layer.** The data engine, not the model, computes every figure and investigation. Findings separate
-**verified facts** from **supported explanations** and **hypotheses**, each with a confidence, and say what is unknown
-(e.g. ad spend). Prompts in three modules (identity, business reasoning, conversation) require the model to look before it
-speaks, give the size of a change first, match its words to the confidence ("likely", "might"), keep the overall
-cancellation rate apart from seller- and customer-initiated cancellations, and never claim an action it cannot take.
-Before a reply is spoken, a server check catches two specific overclaims seen in testing (stockouts called "the main
-driver", the overall cancellation rate called "seller-side") and has the model correct them once.
+**AI models and voice platform.**
 
-**Speech-to-text.** The browser's **Web Speech API** (`SpeechRecognition`, Chrome or Edge, `en-IN` or `hi-IN`), one utterance
-per press of the microphone, with live interim text. In Chrome the audio goes to Google's speech service; nothing is recorded
-by Mini AI. In the real-microphone session recorded so far, each spoken question took about 5 s to recognise, including the time spent speaking.
+- **Voice conversation: OpenAI `gpt-realtime-2.1`.** One model hears and speaks, connected from the browser over
+  **WebRTC** (voice "marin"). Semantic turn detection decides when the seller has finished, and the seller can
+  interrupt at any time. It speaks English, Hindi and Hinglish; in Auto mode it replies in the language of each turn.
+- **Live transcript on screen:** OpenAI `gpt-transcribe`, running alongside the conversation.
+- **Typed chat:** OpenAI **`gpt-5.4-mini`** (Responses API) with the same data tools. A fallback voice uses the
+  browser's own speech recognition and speech synthesis.
 
-**Text-to-speech.** The browser's **`speechSynthesis`**, sentence by sentence, preferring an Indian English or Hindi voice
-(e.g. "Microsoft Heera" on Windows). The seller can interrupt or mute it. This is browser speech, not production-grade
-streaming voice. In that session the first spoken words came about 6 s after the question was sent, almost all of it model time.
+**Workflow.**
 
-**Live voice (Milestone 6).** A separate **Live** mode now uses OpenAI's speech-to-speech `gpt-realtime-2.1` over WebRTC,
-with a 120-second browser credential from the server and the same data tools. In live tests with generated speech the
-median time from the end of a question to the first reply audio was about 2.1 s. The browser voice above stays as the
-fallback. See [REALTIME-VOICE-REPORT.md](REALTIME-VOICE-REPORT.md).
+1. The seller opens Mini AI. The server checks the account (sales, orders, price, stock, cancellations) and greets at
+   once from the verified figures, then asks why they are calling.
+2. On **Live**, the server creates a 120-second OpenAI credential, and the browser connects in the background, so
+   **Start** only switches the microphone on. The permanent API key never leaves the server.
+3. The seller speaks. The model decides what to look at and calls a **tool**. The browser relays the call to the server,
+   which:
+   - validates it;
+   - runs the data engine;
+   - returns a compact result for the model, plus evidence cards shown on screen.
+4. Mini AI explains in simple words and leads through the likely causes one at a time (stock, cancellations,
+   visibility, price). It asks what the data cannot show ("Do you actually have these sizes at your warehouse?").
+5. It recommends 2–3 practical actions, each with what to watch. The seller can approve them into the tracker; Mini AI
+   can only propose.
+6. When the seller wraps up, it recaps the main issue, the actions and the next step.
 
-**Recommendations and approval.** Fourteen recommendation rules turn findings into prioritised proposals, each with evidence,
-an owner, a metric to monitor, how to verify it worked, and a "check first" caution where acting has a risk (e.g. inspect
-defective earbuds before reordering). Mini AI's only write actions are: add an entry to the seller's action tracker
-**marked Awaiting Approval**, and only when asked; and note something the seller said, labelled as unverified. No tool can
-approve, start or complete an action; the seller does that on screen. Mini AI never contacts suppliers, couriers or
-customers, and never changes prices, stock, orders, refunds or policies.
+**Keeping answers correct.** The data engine, not the model, computes every number and investigation, through 29 typed,
+allowlisted tools. Findings are labelled fact, likely cause or hypothesis, and the prompts make the model speak
+accordingly:
 
-**Demo data versus a real integration.** There is **no Snapdeal API integration and no access to real seller accounts.**
-The seller (UrbanCart Fashion & Lifestyle) is fictional. The headline figures come from the assignment brief (sales
-₹2,00,000 → ₹1,35,000, orders 400 → 270, cancellation rate 8% → 14%, ASP ₹500, out-of-stock 5 → 18); every order, product,
-review and shipment behind them is **synthetic**, generated so the records add up to those figures exactly. Every page and
-evidence card labels its source. The tracker and memory are saved as JSON files on the server.
+- stock-outs are "probably part of it, but we can't tell yet exactly how much";
+- the overall cancellation rate is never called the seller's fault.
 
-**Quality evidence.** 134 automated unit and server tests, an end-to-end browser suite on desktop and phone, and repeated live-model
-evaluations with the real API (scenario checks, five-run stability for the fixed reasoning issues). See
-`docs/FINAL-SUBMISSION-REPORT.md` for results and known limitations.
+In chat, a server check rewrites an overclaiming answer before it is shown.
+
+**Data and assumptions.** Headline figures are the brief's:
+
+| Metric | Last month | This month |
+|---|---|---|
+| Sales | ₹2,00,000 | ₹1,35,000 |
+| Orders | 400 | 270 |
+| Cancellation rate | 8% | 14% |
+| Average selling price | ₹500 | ₹500 |
+| Out-of-stock | 5 | 18 |
+
+Assumptions:
+
+- "This month" is October 2026 and "last month" is September 2026.
+- The cancellation rate is the overall rate: all cancellations ÷ orders placed.
+- "Out-of-stock products" counts sizes and colours: 18 of 43, across 10 of the 20 products.
+
+Behind those figures is a **synthetic** dataset for a fictional seller, UrbanCart, generated so it adds up to the
+brief's figures exactly:
+
+- 20 products;
+- 670 orders;
+- 70 cancellations;
+- 42 returns;
+- 596 shipments;
+- 18 reviews;
+- 7 suppliers.
+
+No Snapdeal data or systems are used.
+
+**Stack and quality.**
+
+- **App:** a React + TypeScript (Vite) dashboard and a Node + Express API.
+- **Hosting:** Vercel, with pages on the CDN and the API in Mumbai, plus Upstash Redis for conversations and the
+  tracker.
+- **Testing:** 158 automated tests, browser tests on desktop and phone, and live evaluations with the real models
+  (English, Hindi, Hinglish, interruption, tracker approval).
+- **Cost:** about 5 US cents per spoken answer.
